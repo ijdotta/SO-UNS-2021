@@ -1,0 +1,16 @@
+El resultado es 0
+El resultado es 1
+El resultado es 2
+El resultado es 3
+El resultado es 4
+Operaciones aritméticas (i=1) => sum(2) ; subt(-4) ; div(0) ; mul(5)
+Operaciones aritméticas (i=2) => sum(4) ; subt(-3) ; div(0) ; mul(10)
+Operaciones aritméticas (i=3) => sum(6) ; subt(-2) ; div(0) ; mul(15)
+Operaciones aritméticas (i=4) => sum(8) ; subt(-1) ; div(0) ; mul(20)
+Operaciones aritméticas (i=5) => sum(10) ; subt(0) ; div(1) ; mul(25)
+Estoy mostrando el directorio actual.
+Estoy mostrando el directorio actual.
+Estoy mostrando el directorio actual.
+Estoy mostrando el directorio actual.
+Estoy mostrando el directorio actual.
+Se ha finalizado la actividad
