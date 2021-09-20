@@ -13,7 +13,7 @@ void *funcion (void *data) {
     int j;
     pthid = pthread_self();
     j = 0;
-    while (j < 3) {
+    while (j < 10000) {
         a++;
         printf("Soy el thread %d con identificacion %lu correspondiente al proceso %d \n", *((int*)data),
             pthid, getpid());
