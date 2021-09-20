@@ -7,7 +7,7 @@
 
 #define N 5
 
-int main(void) {
+int main(int argc, char const *argv[]) {
 
     // definición de matrices
     int A[N][N];
@@ -32,10 +32,11 @@ int main(void) {
             printf("Estoy en el hijo %d\n", i);
 
             FILE * sumafila;
-            char * filename;
+            char filename[50];
+            printf("Estoy en el hijo %d otra vez\n", i);
+
             sprintf(filename, "%s%d%s", "SumaFila(", i, ").txt");
-            
-            printf("filename: %s", filename);
+            printf("filename: %s\n", filename);
 
             sumafila = fopen(filename, "w");
 
@@ -44,9 +45,9 @@ int main(void) {
                 int sum = A[i][j] + B[i][j];
                 printf("suma = %d \n", sum);
 
-                char * value;
+                char value[4];
                 sprintf(value, "%d", sum);
-                fprintf(sumafila, "%s", value);
+                fprintf(sumafila, "%s\n", value);
                 
             }
 
@@ -68,16 +69,20 @@ int main(void) {
     for (int i = 0; i < N; i++) {
         FILE * file;
 
-        char * filename;
+        char filename[50];
         sprintf(filename, "%s%d%s", "SumaFila(", i, ").txt");
+
+        printf("loading results from file %s\n", filename);
 
         file = fopen(filename, "r");
 
         int j = 0;
-        while (!feof(file)) {
-            char * val;
-            fgets(val, 1, file);
-            C[i][j] = atoi(val);
+        while (!feof(file) && j < N) {
+            char val[2];
+            fgets(val, 5, file);
+            printf("file %d, val=%s\n", i, val);
+            C[i][j] = atoi(&val[0]);
+            j++;
         }
 
         fclose(file);
