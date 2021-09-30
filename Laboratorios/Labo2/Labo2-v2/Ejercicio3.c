@@ -79,7 +79,7 @@ int main(int argc, char const *argv[]) {
         int j = 0;
         while (!feof(file) && j < N) {
             char val[2];
-            fgets(val, 5, file);
+            fgets(val, 5, file); // 5 es un número arbitrario, va a tomar caracteres solo hasta el final de línea
             printf("file %d, val=%s\n", i, val);
             C[i][j] = atoi(&val[0]);
             j++;
@@ -98,4 +98,3 @@ int main(int argc, char const *argv[]) {
     }
 
 }
-
